@@ -21,8 +21,6 @@ namespace RegExSegmentLocker
         private Button btnRegexNumber;
         private Button btnRegexString;
         private DataGridView dgvRegEx;
-        private Button btnAddEmptyRow;
-        private Button btnDeleteRow;
         private DataGridViewTextBoxColumn RegEx;
         private DataGridViewTextBoxColumn Description;
         private Label lbRegEx;
@@ -84,8 +82,6 @@ namespace RegExSegmentLocker
             this.btnRegexNumber = new System.Windows.Forms.Button();
             this.btnRegexString = new System.Windows.Forms.Button();
             this.dgvRegEx = new System.Windows.Forms.DataGridView();
-            this.btnAddEmptyRow = new System.Windows.Forms.Button();
-            this.btnDeleteRow = new System.Windows.Forms.Button();
             this.RegEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEx)).BeginInit();
@@ -93,7 +89,7 @@ namespace RegExSegmentLocker
             // 
             // txtRegEx
             // 
-            this.txtRegEx.Location = new System.Drawing.Point(17, 38);
+            this.txtRegEx.Location = new System.Drawing.Point(863, 405);
             this.txtRegEx.Multiline = true;
             this.txtRegEx.Name = "txtRegEx";
             this.txtRegEx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -107,16 +103,16 @@ namespace RegExSegmentLocker
             this.lbRegEx.AutoSize = true;
             this.lbRegEx.Location = new System.Drawing.Point(17, 19);
             this.lbRegEx.Name = "lbRegEx";
-            this.lbRegEx.Size = new System.Drawing.Size(170, 13);
+            this.lbRegEx.Size = new System.Drawing.Size(350, 25);
             this.lbRegEx.TabIndex = 1;
             this.lbRegEx.Text = "Regular Expressions: (one per line)";
             // 
             // chkbxIncludeTagContent
             // 
             this.chkbxIncludeTagContent.AutoSize = true;
-            this.chkbxIncludeTagContent.Location = new System.Drawing.Point(20, 206);
+            this.chkbxIncludeTagContent.Location = new System.Drawing.Point(22, 428);
             this.chkbxIncludeTagContent.Name = "chkbxIncludeTagContent";
-            this.chkbxIncludeTagContent.Size = new System.Drawing.Size(118, 17);
+            this.chkbxIncludeTagContent.Size = new System.Drawing.Size(226, 29);
             this.chkbxIncludeTagContent.TabIndex = 2;
             this.chkbxIncludeTagContent.Text = "Include tag content";
             this.chkbxIncludeTagContent.UseVisualStyleBackColor = true;
@@ -124,9 +120,9 @@ namespace RegExSegmentLocker
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 226);
+            this.label1.Location = new System.Drawing.Point(49, 460);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 52);
+            this.label1.Size = new System.Drawing.Size(474, 100);
             this.label1.TabIndex = 3;
             this.label1.Text = "Example: Text inside html tags, like this:\r\n<a href=\"http://www.thislink.com\">exa" +
     "mple</a>\r\nIf checked, the href content will be scanned too. \r\nText inbetween tag" +
@@ -134,9 +130,9 @@ namespace RegExSegmentLocker
             // 
             // btnRegexEmail
             // 
-            this.btnRegexEmail.Location = new System.Drawing.Point(378, 54);
+            this.btnRegexEmail.Location = new System.Drawing.Point(875, 100);
             this.btnRegexEmail.Name = "btnRegexEmail";
-            this.btnRegexEmail.Size = new System.Drawing.Size(183, 23);
+            this.btnRegexEmail.Size = new System.Drawing.Size(343, 37);
             this.btnRegexEmail.TabIndex = 5;
             this.btnRegexEmail.Text = "Email, e.g. me@url.com";
             this.btnRegexEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,17 +142,17 @@ namespace RegExSegmentLocker
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 38);
+            this.label3.Location = new System.Drawing.Point(870, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Add a regex for:";
             // 
             // btnRegexUrl
             // 
-            this.btnRegexUrl.Location = new System.Drawing.Point(378, 83);
+            this.btnRegexUrl.Location = new System.Drawing.Point(875, 145);
             this.btnRegexUrl.Name = "btnRegexUrl";
-            this.btnRegexUrl.Size = new System.Drawing.Size(183, 23);
+            this.btnRegexUrl.Size = new System.Drawing.Size(343, 37);
             this.btnRegexUrl.TabIndex = 7;
             this.btnRegexUrl.Text = "URL, e.g. http:\\\\something.com";
             this.btnRegexUrl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,9 +161,9 @@ namespace RegExSegmentLocker
             // 
             // btnRegexCopyTitle
             // 
-            this.btnRegexCopyTitle.Location = new System.Drawing.Point(378, 112);
+            this.btnRegexCopyTitle.Location = new System.Drawing.Point(875, 190);
             this.btnRegexCopyTitle.Name = "btnRegexCopyTitle";
-            this.btnRegexCopyTitle.Size = new System.Drawing.Size(183, 23);
+            this.btnRegexCopyTitle.Size = new System.Drawing.Size(343, 37);
             this.btnRegexCopyTitle.TabIndex = 8;
             this.btnRegexCopyTitle.Text = "Copy title, e.g. ((Headline))";
             this.btnRegexCopyTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,9 +172,9 @@ namespace RegExSegmentLocker
             // 
             // btnRegexNumber
             // 
-            this.btnRegexNumber.Location = new System.Drawing.Point(378, 141);
+            this.btnRegexNumber.Location = new System.Drawing.Point(875, 235);
             this.btnRegexNumber.Name = "btnRegexNumber";
-            this.btnRegexNumber.Size = new System.Drawing.Size(183, 23);
+            this.btnRegexNumber.Size = new System.Drawing.Size(343, 37);
             this.btnRegexNumber.TabIndex = 9;
             this.btnRegexNumber.Text = "Number, e.g. 1234";
             this.btnRegexNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,9 +183,9 @@ namespace RegExSegmentLocker
             // 
             // btnRegexString
             // 
-            this.btnRegexString.Location = new System.Drawing.Point(378, 170);
+            this.btnRegexString.Location = new System.Drawing.Point(875, 280);
             this.btnRegexString.Name = "btnRegexString";
-            this.btnRegexString.Size = new System.Drawing.Size(183, 23);
+            this.btnRegexString.Size = new System.Drawing.Size(343, 37);
             this.btnRegexString.TabIndex = 10;
             this.btnRegexString.Text = "String, e.g. \"This Text\"";
             this.btnRegexString.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,32 +199,10 @@ namespace RegExSegmentLocker
             this.dgvRegEx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegEx,
             this.Description});
-            this.dgvRegEx.Location = new System.Drawing.Point(17, 333);
+            this.dgvRegEx.Location = new System.Drawing.Point(22, 60);
             this.dgvRegEx.Name = "dgvRegEx";
-            this.dgvRegEx.Size = new System.Drawing.Size(355, 150);
+            this.dgvRegEx.Size = new System.Drawing.Size(803, 277);
             this.dgvRegEx.TabIndex = 11;
-            // 
-            // btnAddEmptyRow
-            // 
-            this.btnAddEmptyRow.Location = new System.Drawing.Point(378, 333);
-            this.btnAddEmptyRow.Name = "btnAddEmptyRow";
-            this.btnAddEmptyRow.Size = new System.Drawing.Size(183, 23);
-            this.btnAddEmptyRow.TabIndex = 12;
-            this.btnAddEmptyRow.Text = "Add empty row";
-            this.btnAddEmptyRow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmptyRow.UseVisualStyleBackColor = true;
-            this.btnAddEmptyRow.Click += new System.EventHandler(this.btnAddEmptyRow_Click);
-            // 
-            // btnDeleteRow
-            // 
-            this.btnDeleteRow.Location = new System.Drawing.Point(378, 460);
-            this.btnDeleteRow.Name = "btnDeleteRow";
-            this.btnDeleteRow.Size = new System.Drawing.Size(183, 23);
-            this.btnDeleteRow.TabIndex = 13;
-            this.btnDeleteRow.Text = "Delete row";
-            this.btnDeleteRow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteRow.UseVisualStyleBackColor = true;
-            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
             // 
             // RegEx
             // 
@@ -246,8 +220,6 @@ namespace RegExSegmentLocker
             // 
             // MyCustomBatchTaskSettingsControl
             // 
-            this.Controls.Add(this.btnDeleteRow);
-            this.Controls.Add(this.btnAddEmptyRow);
             this.Controls.Add(this.dgvRegEx);
             this.Controls.Add(this.btnRegexString);
             this.Controls.Add(this.btnRegexNumber);
@@ -260,7 +232,7 @@ namespace RegExSegmentLocker
             this.Controls.Add(this.lbRegEx);
             this.Controls.Add(this.txtRegEx);
             this.Name = "MyCustomBatchTaskSettingsControl";
-            this.Size = new System.Drawing.Size(564, 491);
+            this.Size = new System.Drawing.Size(1238, 678);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
